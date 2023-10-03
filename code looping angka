@@ -1,0 +1,22 @@
+print('@@@@@@  @@@@@  @        @@@@@')
+print('@       @   @  @        @   @')
+print('@ @@@@  @@@@@  @        @@@@@')
+print('@    @  @   @  @        @   @')
+print('@@@@@@  @   @  @@@@     @   @')
+
+# Menerima input dari pengguna
+angka_awal = int(input("Masukkan angka awal: "))
+angka_akhir = int(input("Masukkan angka akhir: "))
+
+# Memastikan angka awal lebih kecil dari angka akhir
+if angka_awal > angka_akhir:
+    angka_awal, angka_akhir = angka_akhir, angka_awal
+
+# Menampilkan angka dengan urutan yang dimodifikasi menggunakan while
+i = angka_awal
+j = angka_akhir
+
+while i <= j:
+    print(f"{i} | {j}")
+    i += 1
+    j -= 1
