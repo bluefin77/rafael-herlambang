@@ -1,0 +1,34 @@
+print('@@@@@@  @@@@@  @        @@@@@')
+print('@       @   @  @        @   @')
+print('@ @@@@  @@@@@  @        @@@@@')
+print('@    @  @   @  @        @   @')
+print('@@@@@@  @   @  @@@@     @   @')
+
+def angka_ke_biner(angka):
+    return bin(angka)
+
+def biner_ke_angka(biner):
+    return int(biner, 2)
+
+while True:
+    print('-----PRGORAM KONVERSI BILANGAN-----')
+    print("     Pilih tipe konversi:")
+    print("     1. angka ke Biner")
+    print("     2. Biner ke angka")
+    print("     3. Keluar")
+
+    pilihan = input("Masukkan pilihan (1/2/3): ")
+
+    if pilihan == '1':
+        angka = int(input("Masukkan bilangan angka: "))
+        biner = angka_ke_biner(angka)
+        print(f"Biner: {biner}")
+    elif pilihan == '2':
+        biner = input("Masukkan bilangan biner: ")
+        angka = biner_ke_angka(biner)
+        print(f"angka: {angka}")
+    elif pilihan == '3':
+        print('---terima kasih---')
+        break
+    else:
+        print("Pilihan tidak valid. Silakan coba lagi.")
