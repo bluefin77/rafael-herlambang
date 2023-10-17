@@ -1,0 +1,36 @@
+print('@@@@@@  @@@@@  @        @@@@@')
+print('@       @   @  @        @   @')
+print('@ @@@@  @@@@@  @        @@@@@')
+print('@    @  @   @  @        @   @')
+print('@@@@@@  @   @  @@@@     @   @')
+
+def generate_number_sequence(n, first, second):
+    sequence = []
+    for i in range(n):
+        if i == 0:
+            sequence.append(first)
+        elif i == 1:
+            sequence.append(second)
+        else:
+            next_number = sequence[i - 1] + sequence[i - 2]
+            sequence.append(next_number)
+    return sequence
+
+def main():
+    try:
+        n = int(input("Masukkan jumlah bilangan: "))
+        first = int(input("Masukkan bilangan pertama: "))
+        second = int(input("Masukkan bilangan kedua: "))
+        
+        if n < 2:
+            print("Jumlah bilangan harus lebih besar atau sama dengan 2.")
+        else:
+            result = generate_number_sequence(n, first, second)
+            print("Deret Bilangan:")
+            for num in result:
+                print(num)  # Print each number on a new line
+    except ValueError:
+        print("Input tidak valid. Pastikan Anda memasukkan bilangan bulat.")
+
+if __name__ == "__main__":
+    main()
