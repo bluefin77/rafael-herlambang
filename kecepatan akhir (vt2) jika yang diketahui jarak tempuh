@@ -1,0 +1,18 @@
+
+print('@@@@@@  @@@@@  @        @@@@@')
+print('@       @   @  @        @   @')
+print('@ @@@@  @@@@@  @        @@@@@')
+print('@    @  @   @  @        @   @')
+print('@@@@@@  @   @  @@@@     @   @')
+
+V0 = float(input("Masukkan kecepatan awal (m/s): "))  
+s = float(input("Masukkan jarak yang ditempuh (meter): "))  
+a = float(input("Masukkan percepatan (m/s^2): "))  
+
+
+Vt = (V0 ** 2 + 2 * a * s) ** 0.5
+
+print(f"Kecepatan akhir (Vt) = {Vt} m/s")
+print(f"Kecepatan akhir (Vt) adalah kecepatan yang akan dicapai setelah perjalanan sejauh {s} meter,")
+print(f"dengan kecepatan awal {V0} m/s, dan percepatan {a} m/s^2.")
+
