@@ -1,0 +1,27 @@
+
+print('@@@@@@  @@@@@  @        @@@@@')
+print('@       @   @  @        @   @')
+print('@ @@@@  @@@@@  @        @@@@@')
+print('@    @  @   @  @        @   @')
+print('@@@@@@  @   @  @@@@     @   @')
+
+def hitung_vokal_dan_konsonan(kalimat):
+    jumlah_vokal = 0
+    jumlah_konsonan = 0
+
+    kalimat = kalimat.lower()
+
+    for karakter in kalimat:
+        if karakter.isalpha():
+            if karakter in 'aeiou':
+                jumlah_vokal += 1
+            else:
+                jumlah_konsonan += 1
+
+    return jumlah_vokal, jumlah_konsonan
+
+kalimat_input = input("Masukkan sebuah kalimat: ")
+
+vokal, konsonan = hitung_vokal_dan_konsonan(kalimat_input)
+print(f"Jumlah huruf vokal: {vokal}")
+print(f"Jumlah huruf konsonan: {konsonan}")
