@@ -1,0 +1,16 @@
+print('@@@@@@  @@@@@  @        @@@@@')
+print('@       @   @  @        @   @')
+print('@ @@@@  @@@@@  @        @@@@@')
+print('@    @  @   @  @        @   @')
+print('@@@@@@  @   @  @@@@     @   @')
+
+def hitung(x, y):
+    result = sum(range(x, y + 1))
+    return result
+
+first = int(input("Masukan Angka Pertama : "))
+second = int(input("Masukan Angka Kedua : "))
+
+hasil = hitung(first, second)
+
+print(f"Hasilnya adalah : {hasil}")
