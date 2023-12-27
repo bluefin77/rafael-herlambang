@@ -1,0 +1,32 @@
+print('@@@@@@  @@@@@  @        @@@@@')
+print('@       @   @  @        @   @')
+print('@ @@@@  @@@@@  @        @@@@@')
+print('@    @  @   @  @        @   @')
+print('@@@@@@  @   @  @@@@     @   @')
+
+proyek_list = [
+    {"nama": "Proyek A", "status": "Selesai", "estimasi_waktu": 10},
+    {"nama": "Proyek B", "status": "Dalam Pengerjaan", "estimasi_waktu": 20},
+    {"nama": "Proyek C", "status": "Dalam Pengerjaan", "estimasi_waktu": 15},
+    {"nama": "Proyek D", "status": "Selesai", "estimasi_waktu": 8},
+]
+
+
+proyek_dalam_pengerjaan = [proyek for proyek in proyek_list if proyek["status"] == "Dalam Pengerjaan"]
+
+def bubble_sort_proyek(proyek_list):
+    n = len(proyek_list)
+    for i in range(n - 1):
+        for j in range(0, n - i - 1):
+            if proyek_list[j]["estimasi_waktu"] > proyek_list[j + 1]["estimasi_waktu"]:
+                proyek_list[j], proyek_list[j + 1] = proyek_list[j + 1], proyek_list[j]
+
+print("Proyek yang masih dalam pengerjaan:")
+for proyek in proyek_dalam_pengerjaan:
+    print(f"Nama: {proyek['nama']}, Estimasi Waktu: {proyek['estimasi_waktu']} hari, Status: {proyek['status']}")
+
+bubble_sort_proyek(proyek_dalam_pengerjaan)
+
+print("\nProyek dalam pengerjaan yang diurutkan berdasarkan estimasi waktu:")
+for proyek in proyek_dalam_pengerjaan:
+    print(f"Nama: {proyek['nama']}, Estimasi Waktu: {proyek['estimasi_waktu']} hari, Status: {proyek['status']}")
