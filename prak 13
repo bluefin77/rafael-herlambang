@@ -1,0 +1,17 @@
+
+print('@@@@@@  @@@@@  @        @@@@@')
+print('@       @   @  @        @   @')
+print('@ @@@@  @@@@@  @        @@@@@')
+print('@    @  @   @  @        @   @')
+print('@@@@@@  @   @  @@@@     @   @')
+
+nilai = [90, 78, 96, 80, 86]
+
+rata_rata = sum(nilai) / 5
+
+print(f"Nilai : {nilai}")
+
+print(f"Rata Ratanya : {rata_rata}")
+
+nilaisiswa = [siswa for siswa in nilai if siswa > rata_rata]
+print(f"Siswa Di Atas Rata Rata : {nilaisiswa}")
